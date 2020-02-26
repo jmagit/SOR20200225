@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   constructor(private notify: NotificationService) {
   }
   ngOnInit(): void {
-    this.notify.add('Error emitido desde AppComponent');
+    // this.notify.add('Error emitido desde AppComponent');
   }
 
 }
