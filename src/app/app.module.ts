@@ -7,15 +7,19 @@ import { MyCoreModule, ERROR_LEVEL } from 'src/my-core';
 import { MainModule } from './main/main.module';
 import { SecurityModule } from './security/security.module';
 import { environment } from 'src/environments/environment';
+import { CommonServicesModule } from './common-services';
+import { DemosComponent } from './demos/demos.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DemosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MyCoreModule, MainModule, SecurityModule,
+    CommonServicesModule,
   ],
   providers: [
     { provide: ERROR_LEVEL, useValue: environment.ERROR_LEVEL },
