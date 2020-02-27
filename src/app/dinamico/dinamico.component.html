@@ -1,0 +1,6 @@
+<p>
+  <button type="button"
+    *ngFor="let item of listado; let indice=index"
+    (click)="cambia(indice)">{{item.texto}}</button>
+</p>
+<ng-container *ngComponentOutlet="seleccionado"></ng-container>

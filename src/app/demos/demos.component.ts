@@ -51,7 +51,7 @@ export class DemosComponent implements OnInit, OnDestroy {
   }
 
   add(provincia: string) {
-    const id = this.listado.length;
+    const id = this.listado.length + 1;
     this.listado.push({id, nombre: provincia});
     this.idProvincia = id;
   }
