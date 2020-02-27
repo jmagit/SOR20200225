@@ -9,11 +9,13 @@ import { SecurityModule } from './security/security.module';
 import { environment } from 'src/environments/environment';
 import { CommonServicesModule } from './common-services';
 import { DemosComponent } from './demos/demos.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemosComponent
+    DemosComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

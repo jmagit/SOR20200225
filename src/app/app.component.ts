@@ -8,7 +8,6 @@ import { NotificationService } from './common-services';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'curso en soria';
 
   // constructor(private out: LoggerService) {
   // }
