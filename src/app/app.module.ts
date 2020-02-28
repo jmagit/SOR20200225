@@ -14,6 +14,7 @@ import { DemosComponent } from './demos/demos.component';
 import { HomeComponent } from './home/home.component';
 import { DinamicoComponent } from './dinamico/dinamico.component';
 import { FormularioComponent } from './formulario/formulario.component';
+import { PersonasModule } from './personas';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { FormularioComponent } from './formulario/formulario.component';
     BrowserModule, FormsModule, HttpClientModule,
     AppRoutingModule,
     MyCoreModule, MainModule, SecurityModule,
-    CommonServicesModule,
+    CommonServicesModule, PersonasModule,
   ],
   providers: [
     { provide: ERROR_LEVEL, useValue: environment.ERROR_LEVEL },
