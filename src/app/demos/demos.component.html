@@ -36,8 +36,11 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi sed veritatis del
   <input type="text" value="Tabarnia" #txtProvincia >
   <button type="button" (click)="add(txtProvincia.value)">Add</button>
 </p>
-
+<my-sizer (sizeChange) ="fontsize = $event"></my-sizer>
+<p [style.font-size.px]="fontsize">
 {{listado | json}}
+</p>
+
 
 
 

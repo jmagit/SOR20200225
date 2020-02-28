@@ -9,8 +9,8 @@ import { DemosComponent } from '../demos/demos.component';
 })
 export class DinamicoComponent implements OnInit {
   listado = [
-    { texto: 'Inicio', componente: HomeComponent },
     { texto: 'Demos', componente: DemosComponent},
+    { texto: 'Inicio', componente: HomeComponent },
   ];
   seleccionado = this.listado[0].componente;
 
