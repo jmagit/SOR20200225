@@ -1,0 +1,36 @@
+<form #miForm="ngForm">
+  <p>
+    Código:
+    <input type="number" id="id" name="id" [(ngModel)]="elemento.id"
+      #id="ngModel" required>
+    <span class="error" [hidden]="!id.errors?.required || miForm.pristine">Es obligatorio</span>
+    <br>
+    Nombre:
+    <input type="text" id="nombre" name="cargar" [(ngModel)]="elemento.nombre"
+      #nombre="ngModel" required minlength="3" maxlength="10" uppercase>
+    <span class="error" [hidden]="!nombre.errors?.required">Es obligatorio</span>
+    <span class="error" [hidden]="!nombre?.errors?.minlength && !nombre?.errors?.maxlength">
+      Debe tener entre 3 y 10 letras</span>
+    <span class="error" [hidden]="!nombre.errors?.uppercase">Tiene que estar en mayusculas</span>
+    <br>
+    Descripción:
+    <input type="text" id="descripcion" name="descripcion" [(ngModel)]="elemento.descripcion"
+      #descripcion="ngModel" minlength="3" maxlength="10">
+    <span class="error" [hidden]="!descripcion?.errors?.minlength && !descripcion?.errors?.maxlength">
+      Debe tener entre 3 y 10 letras</span>
+    <br>
+    Precio:
+    <input type="number" id="precio" name="precio" [(ngModel)]="elemento.precio"
+      #precio="ngModel" min="0.01">
+    <span class="error" [hidden]="!precio?.errors?.min">
+      Debe ser mayor que 0</span>
+  </p>
+  <p>
+    <input type="button" [disabled]="miForm.invalid" value="Enviar" (click)="enviar()">
+    <input type="button" value="Volver">
+  </p>
+</form>
+
+{{elemento | json}}
+<input type="button" value="Cargar" (click)="cargar()">
+
